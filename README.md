@@ -69,18 +69,18 @@ As mentioned in the system architecture diagram, the main server application foc
 
 Client side of the application has FXML based GUI application. JavaFX library is used for this purpose. There are multiple components of the client application. 
 1. Whiteboard Client main application. 
-  a. Responsible for initializing the login page. 
-  b. It also connects with the server.  
+  - Responsible for initializing the login page. 
+  - It also connects with the server.  
 2. Login Page
-  a. It initializes the main controller and login controller.
-  b. It uses the FXML document to spawn the GUI application.
-  c. Responsible for registering the user to the server as well as connecting the user to the whiteboard. 
+  - It initializes the main controller and login controller.
+  - It uses the FXML document to spawn the GUI application.
+  - Responsible for registering the user to the server as well as connecting the user to the whiteboard. 
 3. Main whiteboard page. 
-  a. This is invoked by Login page once the user is assigned a specific whiteboard. 
-  b. It also uses the FXML document to spawn the GUI application. 
-  c. It uses the main controller initialized by the login page. 
-  d. Main controller has all the definitions of canvas drawings and chat application. It uses the custom shapes library available as a package for different shapes. 
+  - This is invoked by Login page once the user is assigned a specific whiteboard. 
+  - It also uses the FXML document to spawn the GUI application. 
+  - It uses the main controller initialized by the login page. 
+  - Main controller has all the definitions of canvas drawings and chat application. It uses the custom shapes library available as a package for different shapes. 
 4. Whiteboard client Interface. 
-  a. This contains all the methods which are used by the server to maintain the state of the whiteboard across all its collaborators. 
-  b. It also contains methods that are used by server to deliver the text messages. 
-  c. It also contains the user management methods that are used by server to manage different users. 
+  - This contains all the methods which are used by the server to maintain the state of the whiteboard across all its collaborators. 
+  - It also contains methods that are used by server to deliver the text messages. 
+  - It also contains the user management methods that are used by server to manage different users. 
