@@ -84,3 +84,13 @@ Client side of the application has FXML based GUI application. JavaFX library is
    - This contains all the methods which are used by the server to maintain the state of the whiteboard across all its collaborators. 
    - It also contains methods that are used by server to deliver the text messages. 
    - It also contains the user management methods that are used by server to manage different users. 
+
+## Class Design
+
+Following is the detail of different classes within the server side of the application. 
+
+![Untitled Diagram(3)](https://user-images.githubusercontent.com/12232515/175649636-9f1b3f69-7c45-40a1-97f0-4cd60f5889bf.jpg)
+
+![Untitled Diagram(4)](https://user-images.githubusercontent.com/12232515/175649685-4f5bed5b-f950-4fd0-9325-8a56c024de60.jpg)
+
+Above is the UML class diagram of the client side of the application
