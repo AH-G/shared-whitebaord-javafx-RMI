@@ -47,3 +47,10 @@ If the user creates the whiteboard project instance, then he becomes the manager
 4. Ability to kick the users/peer out.
 
 When the File-> save option is selected, the user is given an option choose the directory where he can save the files. The dashboard is saved in a PNG format. Similarly, once the File-> open option is selected, the user is given an option to choose the directory and the file which he wants to open. All the multithreading and concurrency is dealt with RMI because of which the server becomes the message passing router apart from user management and maintaining the state of multiple dashboards.
+
+## System Architecture. 
+The architecture of the system follows a server client model, where server is responsible for message routing and user management, and client is responsible for the GUI. RMI is used for the communication of messages. With RMI, we can invoke method on servers or clients. RMI is multithreaded which means that the multiple clients can invoke server’s same method simultaneously given the data structure is thread-safe. Thread-safe data structure means that the data structures being used within the method, which is invoked through RMI, is able to withstand simultaneous read and write operations. RMI uses stubs, marshalling and unmarshalling to communicate with the remote objects. Basic communication protocol is defined by the RMI. 
+
+In order to communicate through the RMI, there are two interface created, one at the server side so that the client can invoke server’s method for operations like registering user, creating the whiteboard, adding the user as a collaborator to the existing project etc. A callback client interface is also created with the help of which the server can use the method defined within the client like drawing on the canvas as well as writing texts on the chat window. 
+
+![image](https://user-images.githubusercontent.com/12232515/175648538-d36ad177-9c32-444d-855b-1cdc981877e1.png)
