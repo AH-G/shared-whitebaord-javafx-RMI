@@ -45,4 +45,5 @@ If the user creates the whiteboard project instance, then he becomes the manager
 2. Ability to open an existing dashboard.
 3. Ability to save the state of dashboard.
 4. Ability to kick the users/peer out.
+
 When the File-> save option is selected, the user is given an option choose the directory where he can save the files. The dashboard is saved in a PNG format. Similarly, once the File-> open option is selected, the user is given an option to choose the directory and the file which he wants to open. All the multithreading and concurrency is dealt with RMI because of which the server becomes the message passing router apart from user management and maintaining the state of multiple dashboards.
