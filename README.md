@@ -53,4 +53,5 @@ The architecture of the system follows a server client model, where server is re
 
 In order to communicate through the RMI, there are two interface created, one at the server side so that the client can invoke server’s method for operations like registering user, creating the whiteboard, adding the user as a collaborator to the existing project etc. A callback client interface is also created with the help of which the server can use the method defined within the client like drawing on the canvas as well as writing texts on the chat window. 
 
-![image](https://user-images.githubusercontent.com/12232515/175648538-d36ad177-9c32-444d-855b-1cdc981877e1.png)
+![Untitled Diagram(2)](https://user-images.githubusercontent.com/12232515/175648797-30dba99d-99a6-4681-9bb2-8f19c0891cea.jpg)
+
