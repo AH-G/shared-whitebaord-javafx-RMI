@@ -38,7 +38,8 @@ Along with clientID, a list of the whiteboard instances currently running is als
 
 There are two roles that the user can have,
 1. Manager
-2. Collaborator.
+2. Collaborator
+
 If the user creates the whiteboard project instance, then he becomes the manager of the project, all the other users who join afterwards are given the role of collaborator. A manager is given some privileges over the collaborators. These privileges are
 1. Ability to clear the dashboard by clicking the option File -> New.
 2. Ability to open an existing dashboard.
