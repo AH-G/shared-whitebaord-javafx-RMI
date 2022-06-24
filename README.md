@@ -55,3 +55,32 @@ In order to communicate through the RMI, there are two interface created, one at
 
 ![Untitled Diagram(2)](https://user-images.githubusercontent.com/12232515/175648797-30dba99d-99a6-4681-9bb2-8f19c0891cea.jpg)
 
+The diagram above shows the whole system architecture. Following libraries have been used for the implementation of the above architecture. 
+1.	JavaFX
+2.	RMI
+3.	Java Swing for saving the documents. 
+
+There are three main parts of the server. 
+1.	Whiteboard Server interface
+2.	Whiteboard main server application
+3.	Whiteboard properties data structure. 
+
+As mentioned in the system architecture diagram, the main server application focuses on registering the server interface to the RMI registry. It also does the user management by registering the users, assigning the user to different whiteboards, maintaining the information about the whiteboards, maintaining the collaborators on different whiteboards among other things. In order to maintain the information about different whiteboards, it uses the data structure “whiteboard properties”. It also maintains the information of different RMI client objects which is used by the interface to communicate with the client. Whiteboard Server Interface is responsible to replicate all the canvas state on all collaborators. It is also responsible to route text messages to all the collaborators. 
+
+Client side of the application has FXML based GUI application. JavaFX library is used for this purpose. There are multiple components of the client application. 
+1. Whiteboard Client main application. 
+  a. Responsible for initializing the login page. 
+  b. It also connects with the server.  
+2. Login Page
+  a. It initializes the main controller and login controller.
+  b. It uses the FXML document to spawn the GUI application.
+  c. Responsible for registering the user to the server as well as connecting the user to the whiteboard. 
+3. Main whiteboard page. 
+  a. This is invoked by Login page once the user is assigned a specific whiteboard. 
+  b. It also uses the FXML document to spawn the GUI application. 
+  c. It uses the main controller initialized by the login page. 
+  d. Main controller has all the definitions of canvas drawings and chat application. It uses the custom shapes library available as a package for different shapes. 
+4. Whiteboard client Interface. 
+  a. This contains all the methods which are used by the server to maintain the state of the whiteboard across all its collaborators. 
+  b. It also contains methods that are used by server to deliver the text messages. 
+  c. It also contains the user management methods that are used by server to manage different users. 
