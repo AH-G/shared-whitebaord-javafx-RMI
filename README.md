@@ -94,3 +94,24 @@ Following is the detail of different classes within the server side of the appli
 ![Untitled Diagram(4)](https://user-images.githubusercontent.com/12232515/175649685-4f5bed5b-f950-4fd0-9325-8a56c024de60.jpg)
 
 Above is the UML class diagram of the client side of the application
+
+## Communication Protocol
+While the basic network communication is done through RMI and uses TCP sockets. Application level communication protocols are still needed to be set for the sending of the drawings and messages. Since the JavaFx is not serializable, the communication protocol that I have come with is described below. 
+1.	Different method are invoked on the basis of mode of drawing selection and mouse actions on the canvas. 
+2.	There are three mouse actions,
+    a.	Mouse clicked. 
+    b.	Mouse dragged
+    c.	Mouse released. 
+3.	The modes are 
+    a.	Text
+    b.	Line
+    c.	Free
+    d.	Rectangle
+    e.	Circle
+    f.	Triangle
+4.	The information sent to the other users are 
+    a.	Mode
+    b.	Mouse actions (start, drag, end)
+    c.	Coordinates (X,Y) of the canvas
+    d.	Color
+5.	Based on this information the users replicate the drawings of other users. 
